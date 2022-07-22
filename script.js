@@ -17,14 +17,14 @@ function compute()
 }
 
 
-function SliderValue()
+function updateRate()
 {
-    var slider = document.getElementById("rate");
-    var output = document.getElementById("rate_display");
-    output.innerHTML = slider.value; // Display the default slider value
-    document.getElementById("rate").style.color="red";
+    var rateval = document.getElementById("rate").value;
+    
+    document.getElementById("rate_val").innerText=rateval; // Display the default slider value
+   
     // Update the current slider value (each time you drag the slider handle)
-    slider.oninput = function() 
+    rateval.oninput = function() 
     {
         
         output.innerHTML = this.value;
